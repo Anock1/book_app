@@ -16,7 +16,7 @@ function Home() {
 
     useEffect(() => {
     setLoading(true)
-    axios.get('http://localhost:3001/api/books')
+    axios.get('https://book_api.onrender.com:3001/api/books')
     .then((response) =>{
      setBooks(response.data.data)
     console.log(response.data.data)
