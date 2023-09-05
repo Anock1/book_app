@@ -11,7 +11,7 @@ const ShowBook = () => {
 
     useEffect(() => {
     setLoading(true);
-    axios.get(`https://book_api.onrender.com:3001/api/book/${id}`)
+    axios.get(`https://book-api-wagp.onrender.com:3001/api/book/${id}`)
     .then((response)=>{
         setBook(response.data);
         setLoading(false)

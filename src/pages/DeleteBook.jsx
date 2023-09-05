@@ -13,7 +13,7 @@ const DeleteBook = () => {
     const {enqueueSnackbar}= useSnackbar()
     const handleDeleteBook = ()=>{
         setLoading(true);
-        axios.delete(`https://book_api.onrender.com:3001/api/book/${id}`)
+        axios.delete(`https://book-api-wagp.onrender.com:3001/api/book/${id}`)
         .then(()=>{
           setLoading(false);
           enqueueSnackbar('Book deleted successfully',{variant:'success'})
