@@ -25,7 +25,7 @@ const handleSaveBook =()=>{
 
     setLoading(true)
     // post request
-    axios.post('https://book-api-wagp.onrender.com:3001/api/post',data)
+    axios.post('http://localhost:3001/api/post',data)
     .then(()=>{
         setLoading(false)
         enqueueSnackbar('Book created successfully',{variant:'success'})

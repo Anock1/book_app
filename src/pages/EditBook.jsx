@@ -17,7 +17,7 @@ const {enqueueSnackbar}= useSnackbar()
 
 useEffect(() => {
 setLoading(true)
-axios.get(`https://book-api-wagp.onrender.com:3001/api/book/${id}`)
+axios.get(`http://localhost:3001/api/book/${id}`)
 .then((response)=>{
 console.log(response.data)
 setAuthor(response.data.author)
@@ -43,7 +43,7 @@ const handleEditBook =()=>{
 
     setLoading(true)
     // post request
-    axios.put(`https://book-api-wagp.onrender.com:3001/api/book/${id}`,data)
+    axios.put(`http://localhost:3001/api/book/${id}`,data)
     .then(()=>{
         setLoading(false)
         enqueueSnackbar('Book Edited successfully',{variant:'success'})
